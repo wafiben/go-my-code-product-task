@@ -1,0 +1,46 @@
+FUNCTION  dot_product( v1:ARRAY_OF FLOAT,  v2:ARRAY_OF FLOAT) 
+BEgIN
+VAR
+    i:INTEGER;
+    ps:FLOAT;
+    i:=0;
+    ps:=0;
+BEGIN
+    FOR i FROM 0 TO n1-1 STEP 1  DO 
+  ps:=v1[i]*v2[i]+ps;
+
+END_FOR
+ RETURN ps;
+END
+ALGORITHM scalar_product
+VAR
+   vector_one:ARRAY_OF FLOAT;
+   vector_two:ARRAY_OF FLOAT;
+   n:INTEGER;
+   j:INTEGER;
+   n1:INTEGER
+   product:FLOAT;
+   n1:=0;
+   n:=0;
+   product:=0;
+   j:=0;
+ 
+BEGIN
+ Write('give the number of vectors');
+ Read(n);
+  Write('give the length of the vectors');
+ Read(n1);
+ 
+ FOR j FROM 0 TO n1-1 STEP 1  DO 
+   Write('print vectors');
+   Read(vector_one[i]);
+   Read(vector_two[i]);
+
+END_FOR
+ product :=dot_product(vector_one,vector_two);
+  IF(product=0) THEN
+ Write('THE vectoS are orthogonal');
+ ELSE
+  Write('THE vectors are  NOT orthogonal');
+  END_IF
+END
